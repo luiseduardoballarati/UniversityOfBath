@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <form method='POST' action='/aircrafts/update/{{aircraft.aircraft_id}}'>
+      Manufacturer: <input type="text" name="manufacturer" value = {{aircraft.manufacturer}}><br>
+      Model: <input type="text" name="model" value={{aircraft.model}}><br>
+      Passenger_Capacity: <input type="number" name="passenger_capacity" value={{aircraft.passenger_capacity}}><br>
+      Cruising_Range_Miles: <input type="number" name="cruising_range_miles" value={{aircraft.cruising_range_miles}}><br>
+      <input type="submit" value="Update">
+      <a href='/aircrafts/list'>Cancel action</a>
+    </form>
+  </body>
+</html>

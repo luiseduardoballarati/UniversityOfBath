@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <a href="/airports/create">Create a new airport</a>
+    <table>
+      <thead>
+        <tr>
+          <th>Airport ID</th>
+          <th>Airport Name</th>
+          <th>City</th>
+          <th>Country</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for a in airport %}
+        <tr>
+          <td>{{ a.airport_id }}</td>
+          <td>{{ a.airport_name }}</td>
+          <td>{{ a.city }}</td>
+          <td>{{ a.country }}</td>
+          <td>
+            <a href="/airports/update/{{ a.airport_id }}">edit</a>
+            <a href="/airports/delete/{{ a.airport_id }}">delete</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

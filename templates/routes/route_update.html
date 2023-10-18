@@ -1,0 +1,10 @@
+<html>
+  <body>
+    <form method='POST' action='/routes/update/{{route.route_id}}'>
+      Departure_Airport_ID: <input type="number" name="departure_airport_id" value = {{route.route_id}}><br>
+      Arrival_Airport_ID: <input type="number" name="arrival_airport_id" value={{route.route_id}}><br>
+      <input type="submit" value="Update">
+      <a href='/routes/list'>Cancel action</a>
+    </form>
+  </body>
+</html>

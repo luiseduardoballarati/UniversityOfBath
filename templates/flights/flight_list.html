@@ -1,0 +1,36 @@
+<html>
+  <body>
+    <a href="/flights/create">Create a new flight</a>
+    <table>
+      <thead>
+        <tr>
+          <th>Flight ID</th>
+          <th>Aircraft ID</th>
+          <th>Route ID</th>
+          <th>Departure Date</th>
+          <th>Departure Time</th>
+          <th>Arrival Date</th>
+          <th>Arrival Time</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for flight in flights %}
+        <tr>
+          <td>{{ flight.flight_id }}</td>
+          <td>{{ flight.aircraft_id }}</td>
+          <td>{{ flight.route_id }}</td>
+          <td>{{ flight.departure_date }}</td>
+          <td>{{ flight.departure_time }}</td>
+          <td>{{ flight.arrival_date }}</td>
+          <td>{{ flight.arrival_time }}</td>
+          <td>
+            <a href="/flights/update/{{ flight.flight_id }}">edit</a>
+            <a href="/flights/delete/{{ flight.flight_id }}">delete</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+  <body>
+    <a href="/pilots/create">Create a new pilot</a>
+    <table>
+      <thead>
+        <tr>
+          <th>Pilot ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Date of Birth</th>
+          <th>Flown Hours</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for pilot in pilots %}
+        <tr>
+          <td>{{ pilot.pilot_id }}</td>
+          <td>{{ pilot.first_name }}</td>
+          <td>{{ pilot.last_name }}</td>
+          <td>{{ pilot.born_date }}</td>
+          <td>{{ pilot.flown_hours }}</td>
+          <td>
+            <a href="/pilots/update/{{ pilot.pilot_id }}">edit</a>
+            <a href="/pilots/delete/{{ pilot.pilot_id }}">delete</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

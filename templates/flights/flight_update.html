@@ -1,0 +1,14 @@
+<html>
+  <body>
+    <form method='POST' action='/flights/update/{{flight.flight_id}}'>
+      Aircraft_ID: <input type="number" name="aircraft_id"><br>
+      Route_ID: <input type="number" name="route_id"><br>
+      Departure_Date: <input type="date" name="departure_date"><br>
+      Departure_Time: <input type="time" name="departure_time"><br>
+      Arrival Date: <input type="date" name="arrival_date"><br>
+      Arrival Time: <input type="time" name="arrival_time"><br>
+      <input type="submit" value="Update">
+      <a href='/flights/list'>Cancel action</a>
+    </form>
+  </body>
+</html>

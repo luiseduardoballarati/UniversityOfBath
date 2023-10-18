@@ -1,0 +1,10 @@
+<html>
+  <body>
+    Delete flight {{flight.flight_id}}: {{flight.aircraft_id}} {{flight.route_id}} {{flight.departure_date}} {{flight.departure_time}}?
+    <form method='POST' action='/flights/delete/{{flight.flight_id}}'>
+      <input type="submit" value="Delete">
+      <form>
+        <a href='/flights/list'>Cancel action</a>
+      </form>
+  </body>
+</html>

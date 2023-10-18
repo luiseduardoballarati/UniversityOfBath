@@ -1,0 +1,10 @@
+<html>
+  <body>
+    Delete aiport {{airport.airport_id}}: {{airport.airport_name}} {{airport.airport_country}}?
+    <form method='POST' action='/airport/delete/{{airport.airport_id}}'>
+      <input type="submit" value="Delete">
+      <form>
+        <a href='/airports/list'>Cancel action</a>
+      </form>
+  </body>
+</html>

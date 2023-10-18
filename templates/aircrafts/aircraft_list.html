@@ -1,0 +1,32 @@
+<html>
+  <body>
+    <a href="/aircrafts/create">Create a new aircraft</a>
+    <table>
+      <thead>
+        <tr>
+          <th>Aircraft ID</th>
+          <th>Manufacturer</th>
+          <th>Model</th>
+          <th>Passenger Capacity</th>
+          <th>Cruising Range Miles</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for a in aircraft %}
+        <tr>
+          <td>{{a.aircraft_id }}</td>
+          <td>{{a.manufacturer }}</td>
+          <td>{{a.model }}</td>
+          <td>{{a.passenger_capacity }}</td>
+          <td>{{a.cruising_range_miles }}</td>
+          <td>
+            <a href="/aircrafts/update/{{a.aircraft_id }}">edit</a>
+            <a href="/aircrafts/delete/{{a.aircraft_id }}">delete</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

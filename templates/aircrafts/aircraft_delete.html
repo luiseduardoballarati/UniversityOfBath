@@ -1,0 +1,10 @@
+<html>
+  <body>
+    Delete aircraft {{aircraft.aircraft_id}}: {{aircraft.manufacturer}} {{aircraft.model}}?
+    <form method='POST' action='/aircrafts/delete/{{aircraft.aircraft_id}}'>
+      <input type="submit" value="Delete">
+      <form>
+        <a href='/aircrafts/list'>Cancel action</a>
+      </form>
+  </body>
+</html>

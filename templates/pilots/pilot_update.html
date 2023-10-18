@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <form method='POST' action='/pilots/update/{{pilot.pilot_id}}'>
+      Pilot_Name: <input type="text" name="first_name" value = {{pilot.first_name}}><br>
+      Pilot_Last_Name: <input type="text" name="last_name" value={{pilot.last_name}}><br>
+      Pilot_born_date: <input type="date" name="born_date" value={{pilot.born_date}}><br>
+      Pilot_flown_hours: <input type="number" name="flown_hours" value={{pilot.flown_hours}}><br>
+      <input type="submit" value="Update">
+      <a href='/pilots/list'>Cancel action</a>
+    </form>
+  </body>
+</html>

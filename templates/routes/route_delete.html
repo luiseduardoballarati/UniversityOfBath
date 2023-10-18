@@ -1,0 +1,10 @@
+<html>
+  <body>
+    Delete route {{route.route_id}}: {{route.departure_airport_id}} {{route_arrival_airport_id}}?
+    <form method='POST' action='/routes/delete/{{route.route_id}}'>
+      <input type="submit" value="Delete">
+      <form>
+        <a href='/routes/list'>Cancel action</a>
+      </form>
+  </body>
+</html>

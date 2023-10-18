@@ -1,0 +1,10 @@
+<html>
+  <body>
+    Delete pilot {{pilot.pilot_id}}: {{pilot.first_name}} {{pilot.last_name}}?
+    <form method='POST' action='/pilots/delete/{{pilot.pilot_id}}'>
+      <input type="submit" value="Delete">
+      <form>
+        <a href='/pilots/list'>Cancel action</a>
+      </form>
+  </body>
+</html>
