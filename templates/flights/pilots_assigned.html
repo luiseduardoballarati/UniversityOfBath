@@ -1,0 +1,29 @@
+<html>
+  <body>
+    <a href="/menu/menu">return to menu</a><br>
+    <a href="/flights/list">return to flights</a><br>
+
+    {{message}}
+
+<br>
+    Flight ID: {{ flight.flight_id}}
+    <table>
+      <thead>
+        <tr>
+          <th>Pilot ID</th>
+          <th>Pilot Name</th>
+          <th>Pilot Last Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for pilot in selected_pilots %}
+        <tr>
+          <td>{{ pilot[0] }}</td>
+          <td>{{ pilot[1] }}</td>
+          <td>{{ pilot[2] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

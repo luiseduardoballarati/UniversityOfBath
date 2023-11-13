@@ -1,0 +1,25 @@
+<html>
+  <body>
+    <a href="/menu/menu">return to menu</a>
+    <table>
+      <thead>
+        <tr>
+          <th>Pilot ID</th>
+          <th>Pilot Name</th>
+          <th>Pilot Last Name</th>
+          <th>Flown Hours</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for pilot in top_pilots %}
+        <tr>
+          <td>{{ pilot.pilot_id }}</td>
+          <td>{{ pilot.first_name }}</td>
+          <td>{{ pilot.last_name }}</td>
+          <td>{{ pilot.flown_hours }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

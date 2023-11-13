@@ -8,6 +8,8 @@ from airports import bp_airports
 from route import bp_routes
 from flights import bp_flights
 from flight_details import bp_flightDetails
+from menu import bp_menu
+
 
 app = Flask(__name__)
 
@@ -22,6 +24,7 @@ app.config['SQLAlCHEMY_TRACKMODIFICATIONS'] = False
 # To use 'https' protocol, much more safe
 app.config['PREFERRED_URL_SCHEME'] = 'https'  
 
+app.config['STATIC_FOLDER'] = 'static'
 
 # Calling my database
 db.init_app(app)
@@ -35,10 +38,11 @@ app.register_blueprint(bp_airports, url_prefix='/airports')
 app.register_blueprint(bp_routes, url_prefix='/routes')
 app.register_blueprint(bp_flights, url_prefix='/flights')
 app.register_blueprint(bp_flightDetails, url_prefix='/flightDetails')
+app.register_blueprint(bp_menu, url_prefix='/menu')
 
 @app.route('/')
 def index():
-    return redirect('/pilots/list')
+    return redirect('/menu/menu')
 
 
 app.run(host='0.0.0.0', port=8080)

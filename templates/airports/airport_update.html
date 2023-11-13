@@ -1,9 +1,9 @@
 <html>
   <body>
     <form method='POST' action='/airports/update/{{airport.airport_id}}'>
-      Airport_Name: <input type="text" name="airport_name" value = {{airport.airport_name}}><br>
-      City: <input type="text" name="city" value={{airport.city}}><br>
-      Country: <input type="text" name="country" value={{airport.country}}><br>
+      Airport_Name: <input type="text" name="airport_name" value ="{{airport.airport_name}}"><br>
+      City: <input type="text" name="city" value="{{airport.city}}"><br>
+      Country: <input type="text" name="country" value="{{airport.country}}"><br>
       <input type="submit" value="Update">
       <a href='/airports/list'>Cancel action</a>
     </form>

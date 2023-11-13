@@ -1,14 +1,52 @@
 <html>
   <body>
-    <form method='POST' action='/flights/update/{{flight.flight_id}}'>
-      Aircraft_ID: <input type="number" name="aircraft_id"><br>
-      Route_ID: <input type="number" name="route_id"><br>
-      Departure_Date: <input type="date" name="departure_date"><br>
-      Departure_Time: <input type="time" name="departure_time"><br>
-      Arrival Date: <input type="date" name="arrival_date"><br>
-      Arrival Time: <input type="time" name="arrival_time"><br>
+    <br>
+    <a href="/menu/menu">return to menu</a><br>
+    INSTRUCTIONS:
+    <br>
+    To add pilots, click in the button to open the boxes.
+    <br>
+    You need to reenter the IDs, departure and arrival date and time. Literally retype if there is no updates.
+    <br>
+    Information about the flight:
+    <br>
+    <form method='POST' action='/flights/update/{{flight.flight_id}}' onsubmit='savePilotIds()'>
+      Aircraft_ID: <input type="number" name="aircraft_id" value={{flight.aircraft_id}}><br>
+      Route_ID: <input type="number" name="route_id" value="{{flight.route_id}}"><br>
+      Departure_Date: <input type="date" name="departure_date" value="{{flight.departure_date}}"><br>
+      Departure_Time: <input type="time" name="departure_time" value="{{flight.departure_time}}"><br>
+      Arrival Date: <input type="date" name="arrival_date" value="{{flight.arrival_date}}"><br>
+      Arrival Time: <input type="time" name="arrival_time" value="{{flight.arrival_time}}"><br>
+      <div id="pilot_ids">
+      </div>
+      <input type="button" value="Add Pilot" onclick="addPilotInput()">
       <input type="submit" value="Update">
       <a href='/flights/list'>Cancel action</a>
     </form>
+
+    <script>
+      const pilotIdDiv = [];
+
+      function addPilotInput() {
+        const pilotIdContainer = document.getElementById('pilot_ids');
+        const input = document.createElement('input');
+        input.type = 'number';
+        input.name = 'pilot_ids';
+        input.placeholder = 'Pilot ID';
+        pilotIdContainer.appendChild(input);
+
+        pilotIdDiv.push(input);
+      }
+      
+      function savePilotIds() {
+        const pilotIds = pilotIdDiv.map(input => input.value);
+        const pilotIdsInput = document.createElement('input');
+        pilotIdsInput.type = 'hidden';
+        pilotIdsInput.name = 'pilot_ids';
+        pilotIdsInput.value = JSON.stringify(pilotIds);
+        document.querySelector('form').appendChild(pilotIdsInput);
+      }
+    </script>
+    </script>
   </body>
 </html>

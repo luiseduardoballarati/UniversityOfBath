@@ -1,9 +1,9 @@
 <html>
   <body>
-    <form method='POST' action='/flightDetails/create'>
+    <form method='POST' action='/flightDetails/update/{{flight_detail.flight_detail_id}}'>
       Flight ID: <input type="number" name="flight_id"><br>
       Pilot ID: <input type="number" name="pilot_id"><br>
-      <input type="submit" value="Create">
+      <input type="submit" value="Update">
       <a href='/flightDetails/list'>Cancel action</a>
     </form>
   </body>

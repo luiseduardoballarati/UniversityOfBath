@@ -1,0 +1,62 @@
+<html>
+    <head>
+      <title> Flights Database </title>
+    </head>
+  <body>
+    <h1>
+      Flights Database
+    </h1>
+    <u1>
+      <a href="/flights/list">Check the the flights</a>
+      <br></br>
+       <a href="/pilots/list">Check the the pilots</a>
+      <br></br>
+       <a href="/aircrafts/list">Check the the aircrafts</a>
+      <br></br>
+       <a href="/routes/list">Check the the routes and airports</a>
+    </u1>
+    <u2>
+      <br></br>
+      <h2>
+        Principal Stats
+      </h2>
+      <a href="/menu/pilots">Check the most experienced pilot</a>
+      <br>
+      <a href="/menu/aircraft">Check the biggest aircraft available</a>
+    </br>
+      <a href="/menu/airport">Check the most common place to visit</a>
+      <br>
+      <a href="/menu/aircraft2">Check the most used aircraft in the flights</a>
+    </br>
+      <a href="/menu/pilot">Check the Pilot that flew the most in the database so far</a>
+      </br>
+        <a href="/menu/flightsper">Flights per year, month or day</a>
+      </br>
+        <a href="/menu/long_short_flight">Shortest and longest flight in the database</a>
+    </br>
+    </u2>
+    <u3>
+      <br></br>
+      <h3>
+        Interative Stats
+      </h3>
+      <form method='POST' action='/menu/flights_per_date'>
+        Check how many flights per year, month or day in the database:(select between 'year', 'month' and 'day'): <input type="text" name="date_format"><br>
+      </form>
+      <br>
+      <form method='POST' action='/menu/flights_per_location'>
+         <a href="/menu/flights_per_location">Most common routes in the database</a>
+       <br>
+        <br>
+      </form>
+      <br>
+      <a href="/menu/image">Check the tables and fields available for your query</a>
+      <br>
+      <form method='POST' action='/menu/search'>
+        <label for="query">Input your query here:</label> <textarea name="query" id="query" rows="5" cols="50"></textarea>
+        <br>
+        <input type="submit" value="search">
+      </form>
+    </u3>
+  </body>
+</html>

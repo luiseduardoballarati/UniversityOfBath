@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <a href="/menu/menu">return to menu</a>
+    <h1>Search Results</h1>
+    <p>Query: {{ query }}</p>
+
+    <table>
+        <tr>
+            {% for column_name in columns %}
+                <th>{{ column_name }}</th>
+            {% endfor %}
+        </tr>
+        {% for row in rows %}
+            <tr>
+                {% for value in row %}
+                    <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

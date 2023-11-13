@@ -1,0 +1,29 @@
+<html>
+  <body>
+    <a href="/menu/menu">return to menu</a>
+    <table>
+      <thead>
+        <tr>
+          <th>Flight ID</th>
+          <th>Flight duration (hours)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in results %}
+        <tr>
+          <td>{{ item[0] }}</td>
+          <td>{{ item[1] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+      <tbody>
+        {% for item in results_short %}
+        <tr>
+          <td>{{ item[0] }}</td>
+          <td>{{ item[1] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

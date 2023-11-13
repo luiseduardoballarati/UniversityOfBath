@@ -1,0 +1,25 @@
+<a href="/menu/menu">return to menu</a>
+<table>
+  <thead>
+    <tr>
+      <th>Departure City</th>
+      <th>Departure Country</th>
+      <th>Arrival City</th>
+      <th>Arrival Country</th>
+      <th>Flight Count</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    {% for item  in common_routes %}
+    <tr>
+      <td> {{ item.departure_city }} </td>
+      <td> {{ item.departure_country }} </td>
+      <td> {{ item.arrival_city }} </td>
+      <td> {{ item.arrival_country }} </td>
+      <td> {{ item.flight_count }} </td>
+
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

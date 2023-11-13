@@ -1,0 +1,17 @@
+<a href="/menu/menu">return to menu</a>
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for date, count in res %}
+    <tr>
+      <td> {{ date }} </td>
+      <td> {{ count }} </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

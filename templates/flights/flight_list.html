@@ -1,6 +1,9 @@
 <html>
   <body>
-    <a href="/flights/create">Create a new flight</a>
+    <a href="/flights/create">Create a new flight</a><br>
+    <a href="/menu/menu">return to menu</a><br>
+    <a href="/flightDetails/list">check pilots per flight (Flight Details)</a>
+<br>
     <table>
       <thead>
         <tr>
@@ -25,8 +28,9 @@
           <td>{{ flight.arrival_date }}</td>
           <td>{{ flight.arrival_time }}</td>
           <td>
-            <a href="/flights/update/{{ flight.flight_id }}">edit</a>
+            <a href="/flights/update/{{ flight.flight_id }}">edit and/or add pilots to this flight</a>
             <a href="/flights/delete/{{ flight.flight_id }}">delete</a>
+            <a href="/flights/pilots_assigned/{{ flight.flight_id }}">check pilots assigned to this flight</a>
           </td>
         </tr>
         {% endfor %}

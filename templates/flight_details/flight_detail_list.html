@@ -1,6 +1,7 @@
 <html>
   <body>
     Information about the pilots of the flights
+    <br></br>
      <a href="/flights/list">return to flights info</a>
     <table>
       <thead>
@@ -11,15 +12,15 @@
         </tr>
       </thead>
       <tbody>
-        {% for flight_detail in Flight_Details %}
+        {% for flightDetail in flight_details %}
         <tr>
-          <td>{{ flight_detail.flight_detail_id }}</td>
-          <td>{{ flight_detail.flight_id }}</td>
-          <td>{{ flight_detail.pilot_id }}</td>
-          <td>{{ pilot.born_date }}</td>
-          <td>{{ pilot.flown_hours }}</td>
+          <td>{{ flightDetail.flight_detail_id }}</td>
+          <td>{{ flightDetail.flight_id }}</td>
+          <td>{{ flightDetail.pilot_id }}</td>
+          <td>
+            <a href="/flightDetails/delete/{{ flightDetail.flight_detail_id }}">delete</a>
           </td>
-        </tr>
+            </tr>
         {% endfor %}
       </tbody>
     </table>

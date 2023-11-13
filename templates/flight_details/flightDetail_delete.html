@@ -1,0 +1,10 @@
+<html>
+  <body>
+    Delete flightDetail {{flight_detail.flight_detail_id}}: {{flight_detail.flight_id}} {{flight_detail.pilot_id}}?
+    <form method='POST' action='/flightDetails/delete/{{flight_detail.flight_detail_id}}'>
+      <input type="submit" value="Delete">
+      <form>
+        <a href='/flightDetails/list'>Cancel action</a>
+      </form>
+  </body>
+</html>

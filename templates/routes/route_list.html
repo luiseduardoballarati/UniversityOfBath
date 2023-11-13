@@ -1,11 +1,14 @@
 <html>
   <body>
     <a href="/routes/create">Create a new route</a>
+    <a href="/menu/menu">Return to menu</a>
     <table>
       <thead>
         <tr>
+          <th>Route ID</th>
           <th>Departure Airport ID</th>
           <th>Arrival Airport ID</th>
+
           <th>Actions</th>
         </tr>
       </thead>
@@ -13,8 +16,8 @@
         {% for r in route %}
         <tr>
           <td>{{ r.route_id }}</td>
-          <td>{{ r.departure_airport_id }}</td>
-          <td>{{ r.arrival_airport_id }}</td>
+          <td>{{ airport_names.get(r.departure_airport_id, 'N/A') }}</td>
+          <td>{{ airport_names.get(r.arrival_airport_id, 'N/A') }}</td>
           <td>
             <a href="/routes/update/{{ r.route_id }}">edit</a>
             <a href="/routes/delete/{{ r.route_id }}">delete</a>

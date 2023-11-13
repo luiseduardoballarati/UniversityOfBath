@@ -1,0 +1,52 @@
+<html>
+  <body>
+    <a href="/menu/menu">return to menu</a>
+    <br> The busiest(s) month(s) had {{ ky }} trips. 
+    <table>
+      <thead>
+        <tr>
+          <th>Month</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in mon %}
+        <tr>
+          <td>{{ item }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <br>
+    <table>
+      The busiest(s) year(s) had {{ kx }} trips.
+      <thead>
+        <tr>
+          <th>Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in year %}
+        <tr>
+          <td>{{ item }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <br>
+    <table>
+      The busiest(s) day(s) had {{ kz }} trips.
+      <thead>
+        <tr>
+          <th>Day</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in day %}
+        <tr>
+          <td>{{ item }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
